@@ -1,0 +1,651 @@
+body {
+    font: 12px/1.5 "Microsoft YaHei",Arial,georgia,verdana,helvetica,sans-serif;/*设置多种字体*/
+    -webkit-font-smoothing: antialiased;
+    /*-webkit-font-smoothing可以使页面上的字体抗锯齿,使用后字体看起来会更清晰舒服
+            none                 ----- 对低像素的文本比较好
+            subpixel-antialiased ------默认值
+            antialiased          ------抗锯齿很好*/
+}
+ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+body{
+    margin: 0;
+}
+input{border:none;outline:none;}
+.lf{float:left;}
+.rt{float:right;}
+.clear:after{display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    content: '';
+}
+/*顶部容器样式*/
+.head-container {
+    width: 100%;
+    height: 50px;
+    background: #52b9ed;
+    margin-top: 26px;
+    position: relative;
+}
+.head-sidebar {
+    width: 230px;
+    height: 76px;
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.head-sidebar b {
+    display: block;
+    width: 50px;
+    height: 76px;
+    background: url("360go/t017c96ffc6f3b31a5d.png") 0 0 no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.head-sidebar p {
+    height: 100%;
+    margin-right: 50px;
+    background: #33afee;
+}
+.head-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+		overflow:hidden;
+}
+ .logo {
+    width: 150px;
+    height: 76px;
+    background: #3cb0eb;
+    overflow: hidden;
+    position: absolute;
+    left: 36px;
+    z-index: 15;
+    bottom: 0;
+}
+.logo a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin: 13px 0;
+
+}
+.head-content>ul.clear{
+    margin-left: 200px;
+		
+}
+.head-content>ul.clear:after{
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    content: '';
+}
+.head-content>ul.clear>li{
+    float:left;
+    height: 50px;
+    transform: skew(-24deg);
+    transition: .15s;
+    cursor: pointer;
+    margin-left: -2px;
+}
+.head-content>ul.clear>li:hover{background-color: #187dcf}
+.head-content>ul.clear>li>a>span{
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 0 18px 0 40px;
+    margin: 16px 0;
+    border-right: 1px solid #fff;
+    position: relative;
+    transition: .2s;
+}
+.head-content>ul.clear>li>a>span>i{
+    transform: skew(24deg);
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.head-content>ul.clear>li>a>span>b{
+    display: block;
+    transform: skew(24deg);
+    font-weight: normal;
+    color: #fff;
+    cursor: pointer;
+}
+.head-content>ul.clear>li>a{
+    text-decoration: none;
+}
+.icon {
+    background-image: url(360go/t01414007447866f7db.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+a.jipiao .icon {
+    background-position: -20px -140px;
+    top: -1px;
+    left: 17px;
+}
+a.shouye .icon {
+    background-position: -20px -20px;
+    top: -1px;
+    left: 18px;
+}
+a.dujia .icon {
+    background-position: -20px -80px;
+    top: -1px;
+    left: 16px;
+}
+a.jiudian .icon {
+    background-position: -20px -200px;
+    top: -1px;
+    left: 16px;
+}
+a.huoche .icon {
+    background-position: -20px -260px;
+    top: 0;
+    left: 16px;
+}
+a.qianzheng .icon {
+    background-position: -20px -795px;
+    top: 0;
+    left: 17px;
+}
+a.tejia .icon {
+    background-position: -20px -320px;
+    top: 0;
+    left: 17px;
+}
+a.jingdian .icon {
+    background-position: -20px -380px;
+    top: -1px;
+    left: 18px;
+}
+a.wangzhi .icon {
+    background-position: -20px -440px;
+    top: -1px;
+    left: 18px;
+}
+.sub-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.sub-nav {
+    padding: 14px 0 14px 197px;
+}
+.sub-nav>ul:after{
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    content: '';
+}
+.sub-nav h2 {
+    float: left;
+    font-size: 14px;
+    background: #52b9ed;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 5px;
+    height: 18px;
+    line-height: 18px;
+    position: relative;
+}
+.sub-nav h2:after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    clear:both;
+}
+.sub-nav>ul>li{
+    float:left;
+    margin: 0 10px;
+}
+#pic-box {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    background: #fff;
+}
+#pic-box>ul.list1 {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+}
+#pic-box>ul.list1 li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 490px;
+    height: 170px;
+    opacity: 0;
+    transition: opacity 0.5s linear
+}
+#pic-box>ul.list1 li.current
+{
+    opacity: 1;
+}
+.banner{position: relative;
+margin-bottom: 15px;}
+.banner>ul.list2 {
+   position:absolute;
+   right: 50%;
+   bottom: 5px;
+}
+.banner>ul.list2>li {
+    color: #fff;
+    float: left;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    overflow: hidden;
+    background: #F90;
+    opacity: 0.5;
+    border-radius: 20px;
+    text-align:center;
+    line-height:20px;
+}
+.banner>ul.list2>li.current {
+    color: #fff;
+    opacity: 0.7;
+    font-weight: 700;
+    background: #f60
+}
+#floor1 {
+    width: 1200px;
+    margin: 0 auto;
+}
+#floor1 div.floor1-main{background: url(360go/bg_03.png) no-repeat;}
+#floor1 span.lf{
+    font-size: 20px;
+    line-height: 28px;}
+#floor1 span.lf b.icon{
+    width:20px;
+    height:20px;
+    background-position: -20px -500px;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+#floor1 div.floor1-top{overflow:hidden;}
+#floor1 div.floor1-top a.rt{
+    line-height: 28px;
+}
+#floor1 div.floor1-top a.rt:after{
+    content: '';
+    width: 0;
+    height:0;
+    display: block;
+    clear:both;
+}
+#floor1 div.floor1-main{
+    background: url(360go/bg_03.png) no-repeat;
+    overflow: hidden;
+}
+#floor1 div.main-left{
+width: 230px;
+float: left;
+padding: 10px;
+position: relative;
+background: url(360go/bj_03.png) no-repeat;
+margin:10px 0 10px 10px;
+padding-right: 0;
+}
+#floor1 div.main-left h3{
+font-size: 14px;
+line-height: 1;
+color: #333;
+position: absolute;
+top: 15px;
+left: 10px;
+}
+div.main-left>ul>li{
+    height: 60px;
+    position: relative;
+    padding-left: 30px;
+}
+div.main-left>ul>li>span{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #e30;
+    font-weight: bold}
+#floor1 div.main-left ul{
+    margin-top: 47px;}
+#floor1 dl.main-detail{
+    width:940px;
+    float:left;
+    margin-top: 10px;
+    background-color: #fff
+}
+#floor1 dl.main-detail>ul>li{
+    float:left;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+#floor1 dl.main-detail>ul>li:first-child{
+    width:456px;
+    overflow: hidden;
+    height:154px;
+}
+#floor1 dl.main-detail>ul>li h3 {
+    height: 34px;
+    background: #f5f5f5;
+    position: relative;
+}
+#floor1 dl.main-detail>ul>li h3 span.price {
+    position: absolute;
+    color: #e30;
+    top: 9px;
+    right: 5px;
+    font-size: 12px;
+}
+/*楼层公用样式*/
+.floor-box {
+    width: 1200px;
+    margin: 0 auto;
+}
+.bt-m{margin-bottom: 40px;}
+.top{
+    border-bottom: 2px solid #f30046;
+    position:relative;
+}
+.hotel  {
+    border-bottom: 2px solid #9659b6;
+}
+	
+.hotel .top-lf span b.hotel-icon{
+		background-position: -20px -620px;
+	}
+.place{
+    border-bottom: 2px solid #1ea8bc;
+}
+.place .top-lf span b.place-icon{
+	  background-position: -20px -680px;
+}
+.plane b.plane-icon{
+		width: 19px;
+    height: 23px;
+    background: url(360go/airplane.png);
+    display: inline-block;
+}
+.top-lf{
+    width: 250px;
+    float: left;}
+.top-lf span{
+    font-size: 20px;
+    line-height: 28px;
+}
+.top-lf span b{
+    vertical-align: top;
+    margin-top: 4px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background-position: -20px -560px;}
+
+
+.top-rt{width: 950px;
+    float: left;
+    position: relative;
+}
+.top-rt a{
+    color: #333;
+    float: left;
+    width: 73px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+}
+.top-rt a:hover{
+    background-color: #f30046;
+}
+.hotel .top-rt div a:hover {
+    background: #9659b6;
+}
+.place .top-rt div a:hover{
+    background: #1ea8bc;
+}
+.plane .top-rt div a:hover{
+    background: #ff8400;
+}
+.plane {
+    border-bottom: 2px solid #ff8400;
+}
+.top>a{
+    position: absolute;
+    right: 0;
+    top: 8px;
+    line-height: 1;
+    font-size: 12px;
+}
+.main-left{
+    background: #fdeff3;
+    width: 250px;
+    overflow: hidden;
+    float:left;
+}
+.place-mleft {
+    background: #e8fafd;
+	}
+.city-list{
+    margin: 10px;
+    background: #fff;
+    padding: 10px;
+    height: 310px;
+}
+.city-list h3{
+    font-size: 14px;
+    line-height: 1;
+    margin: 13px 0;
+    position: relative;
+}
+.city-list div{
+    overflow: hidden;
+}
+.city-list div a {
+    white-space: nowrap;
+    border-left: 1px solid #ddd;
+    padding: 0 5px;
+    line-height: 1;
+    margin: 8px 0 8px -1px;
+    font-size: 14px;
+    float: left;
+}
+.main-right{
+    width: 950px;
+    float: left;
+}
+.main-right ul li{
+    float: left;
+    margin-left: 13px;
+    margin-top: 21px;
+}
+
+div.pic-list h3{
+    height: 30px;
+    background: #f5f5f5;
+    position: relative;
+}
+div.pic-list h3 a{
+    font-size: 14px;
+    line-height: 34px;
+    margin-left: 10px;
+}
+div.pic-list h3 span{
+    position: absolute;
+    right: 10px;
+    color: #e30;
+    top: 8px;
+}
+.pic-big{
+  /* width: 461px;*/
+    height: 154px;
+    overflow: hidden;
+    position: relative;
+    display:inline-block;
+    /*overflow: hidden;*/
+}
+.blc{display:block;}
+.pic-list{
+    width: 224px;
+    transition: .1s ease;
+}
+.pic-list:hover{
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,.3);
+}
+div.footer-box{background: #ffeedb;}
+div.footer-box>ul{padding: 5px;}
+#from-to{
+    float: left;
+    width: 200px;
+    height: 44px;
+    margin: 5px 6px;
+    border: 1px solid #fff;
+    background: #fff;
+    padding: 6px 12px;
+    list-style: none;
+}
+#from-to:hover{
+    border:2px solid #ff8400;
+    padding: 5px 11px;
+}
+#from-to p:first-child{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;}
+#from-to p span:last-child{
+    color: #ff8400;
+    font-size: 24px;
+   /* font-family: "Arial";*/
+    position: relative;
+    float: right;
+    right: 3px;
+    bottom: 10px;
+}
+#foot_box{
+    background: #fff;
+    width: 1000px;
+    height: 87px;
+    margin: 0 auto;
+    text-align: center;
+    color: #999;
+    border-top: 6px solid #de3c12;
+    box-shadow: 0 1px 1px rgba(0,0,0,.06);
+    border-radius: 0 0 3px 3px;
+    padding-bottom: 1px;
+    margin-top: 40px;
+}
+#foot_box p{
+    padding: 19px 0 4px;
+    height: 20px;
+    line-height: 20px;
+}
+#foot_box p.line1 a{
+    margin: 0 5px;
+
+}
+.side-box {
+    width: 100px;
+    right:-40px;
+    margin-left: 610px;
+    overflow: hidden;
+
+}
+.s1{position:fixed;}
+.s2{
+    position: absolute;
+    top:540px;
+}
+
+.side-box ul{
+
+    width: 50px;
+    border-bottom: 1px solid #eee;
+}
+.side-box ul li {
+    border-top: 1px solid #eee;
+    text-align: center;
+    line-height: 50px;
+}
+.side-box ul li a {
+    background: url(360go/floot.png) no-repeat;
+    display: block;
+    width: 50px;
+    height: 50px;
+    transition: none;
+    font-size: 14px;
+    text-indent: -999px;
+}
+.hover1{
+    background: #f30046!important;
+    color: #fff!important;
+    text-indent: 0!important;
+}
+.side-box ul li a:hover {
+    background: #f30046;
+    color: #fff;
+    text-indent: 0;
+}
+
+.side-box ul  li.li-sale a{background-position:-10px -10px; }
+.side-box ul li.li-way a{background-position:-10px -80px;  }
+.side-box ul li.li-hotel a{background-position:-10px -220px;  }
+.side-box ul li.li-goal a{background-position:-10px -150px;  }
+.side-box ul li.li-tickets a{background-position:-10px -290px;  }
+.side-box ul li.li-top a{background-position:-10px -360px;  }
+.pic-holder{
+    width:922px;
+    position:relative;
+}
+.rel{
+    width:461px;
+    position:relative;
+     overflow:hidden;}
+div.move-left,div.move-right{
+    transition: .2s ease;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    background: url(360go/ui-icon.png) no-repeat;
+    opacity: 0;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -30px;
+    z-index: 100;
+
+}
+div.move-left{
+    background-position: -4px -649px;
+    left: 0;
+}
+
+div.move-right{
+    background-position: -2px -707px;
+    right: 0;
+}
+
+li.rel:hover .move-left,li.rel:hover .move-right{
+    opacity: 0.5;
+    background-color:#080808;
+}
+.pic-big a{float:left;
+}

@@ -1,0 +1,22 @@
+/* 效果不理想
+$('li.step ').on("mouseenter",function(){
+
+  $("div.head-sidebar").css("width",140+this.offsetLeft);
+});
+
+$('.step ').on("mouseleave",function() {
+    $("div.head-sidebar").css("width", 338);
+});
+ **/
+//顶部导航条效果
+ $("li.step").mouseenter(function(){
+ $("div.head-sidebar").stop(true).animate({
+ width: 104+this.offsetLeft
+   }, 250 );
+ });
+$(".step").mouseleave(function(){
+    $("div.head-sidebar").stop(true).animate({
+        width: 313
+    }, 500 );
+});
+//楼层图片轮播
